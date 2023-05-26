@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+  <meta charset="UTF-8">
+  <title>Продкут</title>
+</head>
+<body>
+<div class="container">
+  <div th:switch="${products}">
+    <h2 th:case="null">Продукта ненайдено!</h2>
+    <div th:case="*">
+      <h2>Продукты</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Название</th>
+          <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody id="user-table-body">
+        <tr th:each="product : ${products}">
+          <td th:text="${product.id}"></td>
+          <td th:text="${product.productName}"></td>
+          <td th:text="${product.descriptionProduct}"></td>
+          <td><a th:href="@{product-update/{id}(id=${product.id})}">Редактировать продукт</a></td>
+          <td><a th:href="@{product-delete/{id}(id=${product.id})}">Удалить продукт</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a href="/product-create">Создать продукт</a></p>
+  </div>
+</div>
+<footer th:replace="fragments/footer :: footer"></footer>
+<div th:replace="fragments/jsScripts :: scripts"></div>
+</body>
+</html>
