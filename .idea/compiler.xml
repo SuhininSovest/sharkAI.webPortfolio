@@ -7,15 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sharkAI" />
+        <module name="spring-thymeleaf-jpa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sharkAI" target="11" />
+      <module name="spring-thymeleaf-jpa" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="sharkAI" options="-parameters" />
+      <module name="spring-thymeleaf-jpa" options="-parameters" />
     </option>
   </component>
 </project>

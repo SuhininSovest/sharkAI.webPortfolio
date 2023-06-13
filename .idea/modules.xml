@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sharkAI/sharkAI.iml" filepath="$PROJECT_DIR$/sharkAI/sharkAI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharkAI/spring-thymeleaf-jpa.iml" filepath="$PROJECT_DIR$/sharkAI/spring-thymeleaf-jpa.iml" />
     </modules>
   </component>
 </project>
